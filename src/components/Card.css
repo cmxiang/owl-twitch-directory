@@ -1,0 +1,84 @@
+.Card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 150px;
+	width: 300px;
+	background-color: gray;
+	padding: 10px 10px 10px 10px;
+	margin: 20px 20px 20px 20px;
+	background-color: white;
+	border-radius: 15px;
+}
+
+.top {
+	display: flex;
+	flex-direction: row;
+	height: 50%;
+	width: 100%;
+}
+
+.topleft{
+	display: flex;
+	width: 30%;
+	justify-content: center;
+	align-items: center;
+}
+
+.topright{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	width: 70%;
+}
+
+.mid {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	height: 50%;
+}
+
+.hidden {
+	visibility: hidden;
+	z-index: 99;
+	position: absolute;
+	width: 300px;
+	text-align: right;
+}
+
+.liveicon {
+	height: 10px;
+	width: 10px;
+}
+
+.live {
+	visibility: visible;
+}
+
+@keyframes live_animation {
+	0% { transform: scale(1); }
+	25% { transform: scale(1.4); }
+	50% { transform: scale(1); }
+	75% { transform: scale(1.4); }
+	100% { transform: scale(1); }
+}
+
+.live .liveicon {
+	margin: 10px 10px 10px 10px;
+	animation-name: live_animation;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.icon {
+	height: 50px;
+	width: 50px;
+}
+
+p {
+	margin: 2px 0 2px 0;
+}
